@@ -93,12 +93,12 @@ function Particles() {
 
 function TechIcons() {
   const technologies = [
-    { name: "react", position: [3, 1, 0], scale: 1, color: "#61DAFB" },
-    { name: "js", position: [-3, 2, 1], scale: 0.8, color: "#F7DF1E" },
-    { name: "node", position: [2, -2, -1], scale: 1.2, color: "#339933" },
-    { name: "typescript", position: [-2, -1, 2], scale: 0.9, color: "#3178C6" },
-    { name: "html", position: [4, 0, -2], scale: 0.7, color: "#E34F26" },
-    { name: "css", position: [-4, -2, 0], scale: 0.75, color: "#1572B6" },
+    { name: "react", position: new THREE.Vector3(3, 1, 0), scale: 1, color: "#61DAFB" },
+    { name: "js", position: new THREE.Vector3(-3, 2, 1), scale: 0.8, color: "#F7DF1E" },
+    { name: "node", position: new THREE.Vector3(2, -2, -1), scale: 1.2, color: "#339933" },
+    { name: "typescript", position: new THREE.Vector3(-2, -1, 2), scale: 0.9, color: "#3178C6" },
+    { name: "html", position: new THREE.Vector3(4, 0, -2), scale: 0.7, color: "#E34F26" },
+    { name: "css", position: new THREE.Vector3(-4, -2, 0), scale: 0.75, color: "#1572B6" },
   ];
 
   return (
