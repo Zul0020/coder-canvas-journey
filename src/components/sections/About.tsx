@@ -25,30 +25,30 @@ export function About() {
             
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Hello! I'm a passionate software developer with expertise in building 
-                modern web applications and interactive experiences. My journey in 
-                programming began with a curiosity about how digital products work and 
-                evolved into a professional career creating elegant solutions.
+                Hello! I'm a passionate software developer with a strong focus on creating 
+                elegant and efficient solutions to complex problems. My journey in programming 
+                began with a curiosity about how digital products work, and has evolved into 
+                a professional career building impactful applications.
               </p>
               
               <p>
-                With over 5 years of experience, I've worked on various projects from 
-                responsive websites to complex web applications. I love working at the 
-                intersection of creativity and technology, turning ideas into reality 
-                through clean, efficient code.
+                With a solid background in both frontend and backend development, I enjoy 
+                working with modern technologies to deliver responsive, user-friendly 
+                applications. I specialize in JavaScript/TypeScript, React, Node.js, and 
+                modern web technologies.
               </p>
               
               <p>
-                When I'm not coding, you can find me exploring new technologies, 
-                contributing to open-source projects, or sharing knowledge with the 
-                developer community. I believe in continuous learning and staying 
-                updated with the latest industry trends.
+                I'm committed to continuous learning and staying updated with the latest 
+                industry trends. When I'm not coding, you can find me contributing to 
+                open-source projects, sharing knowledge with the developer community, 
+                or exploring new technologies.
               </p>
             </div>
             
             <div className="mt-8 flex flex-wrap gap-3">
               <span className="px-3 py-1 bg-muted rounded-full text-sm">Problem Solver</span>
-              <span className="px-3 py-1 bg-muted rounded-full text-sm">Team Player</span>
+              <span className="px-3 py-1 bg-muted rounded-full text-sm">Full Stack Developer</span>
               <span className="px-3 py-1 bg-muted rounded-full text-sm">Detail-Oriented</span>
               <span className="px-3 py-1 bg-muted rounded-full text-sm">Fast Learner</span>
               <span className="px-3 py-1 bg-muted rounded-full text-sm">Creative Thinker</span>

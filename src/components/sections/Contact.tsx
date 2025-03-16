@@ -131,10 +131,10 @@ export function Contact() {
                     <h4 className="font-medium">Email</h4>
                   </div>
                   <a 
-                    href="mailto:contact@example.com" 
+                    href="mailto:your.email@example.com" 
                     className="text-muted-foreground hover:text-portfolio-primary transition-colors"
                   >
-                    contact@example.com
+                    your.email@example.com
                   </a>
                 </div>
                 
@@ -146,12 +146,12 @@ export function Contact() {
                     <h4 className="font-medium">LinkedIn</h4>
                   </div>
                   <a 
-                    href="https://linkedin.com/in/username" 
+                    href="https://linkedin.com/in/yourusername" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-portfolio-primary transition-colors"
                   >
-                    linkedin.com/in/username
+                    linkedin.com/in/yourusername
                   </a>
                 </div>
                 
@@ -163,12 +163,12 @@ export function Contact() {
                     <h4 className="font-medium">GitHub</h4>
                   </div>
                   <a 
-                    href="https://github.com/username" 
+                    href="https://github.com/yourusername" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-portfolio-primary transition-colors"
                   >
-                    github.com/username
+                    github.com/yourusername
                   </a>
                 </div>
               </div>

@@ -14,30 +14,31 @@ type Project = {
   githubLink: string;
 };
 
+// Replace with your actual projects
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
-    description: "A modern e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product filtering, cart functionality, and payment processing.",
+    title: "Project 1",
+    description: "Brief description of your first project. Include key features and technologies used.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    tags: ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
-    liveLink: "https://example-ecommerce.netlify.app",
-    githubLink: "https://github.com/username/ecommerce-platform",
+    tags: ["React", "Node.js", "MongoDB", "TypeScript"],
+    liveLink: "https://your-project1.com",
+    githubLink: "https://github.com/yourusername/project1",
   },
   {
-    title: "Task Management App",
-    description: "A productivity application that helps users organize tasks, set priorities, and track progress. Implements drag-and-drop functionality and real-time updates.",
+    title: "Project 2",
+    description: "Brief description of your second project. Highlight the problem it solves and your approach.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     tags: ["TypeScript", "React", "Firebase", "Tailwind CSS"],
-    liveLink: "https://task-app-example.vercel.app",
-    githubLink: "https://github.com/username/task-management",
+    liveLink: "https://your-project2.com",
+    githubLink: "https://github.com/yourusername/project2",
   },
   {
-    title: "Weather Dashboard",
-    description: "An interactive weather application that provides real-time weather data, forecasts, and visualizations. Uses geolocation and third-party weather APIs.",
+    title: "Project 3",
+    description: "Brief description of your third project. Mention unique challenges and how you overcame them.",
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-    tags: ["JavaScript", "Chart.js", "REST API", "Geolocation"],
-    liveLink: "https://weather-dashboard-demo.netlify.app",
-    githubLink: "https://github.com/username/weather-dashboard",
+    tags: ["JavaScript", "React", "REST API", "Redux"],
+    liveLink: "https://your-project3.com",
+    githubLink: "https://github.com/yourusername/project3",
   },
 ];
 
