@@ -10,11 +10,11 @@ export function SceneObjects() {
   const scroll = useScroll();
   const section = useStore((state) => state.section);
   const cameraPositionsRef = useRef([
-    [0, 0, 10], // Hero
-    [0, 5, 10], // About
-    [5, 0, 10], // Projects
-    [-5, 0, 10], // Skills
-    [0, -5, 10], // Contact
+    new THREE.Vector3(0, 0, 10), // Hero
+    new THREE.Vector3(0, 5, 10), // About
+    new THREE.Vector3(5, 0, 10), // Projects
+    new THREE.Vector3(-5, 0, 10), // Skills
+    new THREE.Vector3(0, -5, 10), // Contact
   ]);
 
   // Update camera on scroll
@@ -25,7 +25,8 @@ export function SceneObjects() {
       useStore.setState({ section: targetSection });
     }
     
-    const targetPos = new THREE.Vector3(...cameraPositionsRef.current[section]);
+    // Use Vector3 directly from the reference array
+    const targetPos = cameraPositionsRef.current[section];
     camera.position.lerp(targetPos, 0.05);
   });
 
