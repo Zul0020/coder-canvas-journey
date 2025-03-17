@@ -89,9 +89,15 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <Button className="bg-portfolio-primary hover:bg-portfolio-primary/90">
-              Resume
-            </Button>
+            <a 
+              href="https://drive.google.com/file/d/10MGaLuztczj9l4lWbEpvQ0JsJ8-Ouqnj/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-portfolio-primary hover:bg-portfolio-primary/90">
+                Resume
+              </Button>
+            </a>
           </nav>
         )}
       </div>
