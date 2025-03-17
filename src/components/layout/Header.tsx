@@ -43,7 +43,7 @@ export function Header() {
     >
       <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between">
         <a href="#home" className="flex items-center">
-          <h1 className="text-xl font-bold text-gradient">Portfolio</h1>
+          <h1 className="text-xl font-bold text-gradient">Prince Kumar Singh</h1>
         </a>
 
         {isMobile ? (
