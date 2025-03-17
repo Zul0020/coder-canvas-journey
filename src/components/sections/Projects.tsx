@@ -1,6 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useInView } from "react-intersection-observer";
 
@@ -114,15 +115,7 @@ function ProjectCard({ project, index, inView }: { project: Project; index: numb
           ))}
         </div>
         
-        <div className="flex justify-between items-center mt-4">
-          <a 
-            href={project.githubLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-portfolio-primary transition-colors"
-          >
-            <Github className="h-5 w-5" />
-          </a>
+        <div className="flex justify-end items-center mt-4">
           <a 
             href={project.liveLink} 
             target="_blank" 

@@ -22,13 +22,14 @@ export function Hero() {
             <span className="text-gradient">Software Developer</span> Creating Digital Experiences
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Bringing ideas to life with code. Specializing in modern web technologies
-            and 3D interactive experiences.
+            Bringing ideas to life with code. Specializing in modern web technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <Button size="lg" className="bg-portfolio-primary hover:bg-portfolio-primary/90">
-              View My Work
-            </Button>
+            <a href="#projects">
+              <Button size="lg" className="bg-portfolio-primary hover:bg-portfolio-primary/90">
+                View My Work
+              </Button>
+            </a>
             <Button size="lg" variant="outline">
               Contact Me
             </Button>

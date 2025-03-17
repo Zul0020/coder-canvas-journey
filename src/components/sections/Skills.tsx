@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import { useInView } from "react-intersection-observer";
 
@@ -18,7 +17,6 @@ const skillCategories = [
       { name: "JavaScript", icon: "📜", color: "#F7DF1E", level: 92 },
       { name: "TypeScript", icon: "🛡️", color: "#3178C6", level: 85 },
       { name: "React", icon: "⚛️", color: "#61DAFB", level: 90 },
-      { name: "Angular", icon: "🅰️", color: "#DD0031", level: 75 },
     ],
   },
   {
@@ -40,7 +38,6 @@ const skillCategories = [
       { name: "CI/CD", icon: "🔄", color: "#4285F4", level: 75 },
       { name: "AWS", icon: "☁️", color: "#FF9900", level: 72 },
       { name: "Testing", icon: "🧪", color: "#9ACD32", level: 83 },
-      { name: "Three.js", icon: "🎮", color: "#000000", level: 70 },
     ],
   },
 ];
