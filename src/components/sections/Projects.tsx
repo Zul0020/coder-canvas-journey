@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
@@ -14,31 +13,30 @@ type Project = {
   githubLink: string;
 };
 
-// Replace with your actual projects
 const projects: Project[] = [
   {
-    title: "Project 1",
-    description: "Brief description of your first project. Include key features and technologies used.",
+    title: "Contest Pal",
+    description: "A full stack platform that aggregates competitive programming contests from Codechef, Codeforces, and LeetCode. Users can sign up, bookmark contests, and filter by platform with upcoming and past contest views.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    tags: ["React", "Node.js", "MongoDB", "TypeScript"],
-    liveLink: "https://your-project1.com",
-    githubLink: "https://github.com/yourusername/project1",
+    tags: ["TypeScript", "React", "Supabase", "Shadcn", "Cloud"],
+    liveLink: "https://contestpal.devprince.tech/",
+    githubLink: "https://github.com/pksingh0020",
   },
   {
-    title: "Project 2",
-    description: "Brief description of your second project. Highlight the problem it solves and your approach.",
+    title: "Blog App",
+    description: "A full stack blog application that enables users to sign up, publish their own blogs, and explore content from other contributors. Fully deployed on cloud infrastructure.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tags: ["TypeScript", "React", "Firebase", "Tailwind CSS"],
-    liveLink: "https://your-project2.com",
-    githubLink: "https://github.com/yourusername/project2",
+    tags: ["TypeScript", "React", "Cloudflare", "HonoJS", "Tailwind"],
+    liveLink: "https://www.devprince.tech/",
+    githubLink: "https://github.com/pksingh0020",
   },
   {
-    title: "Project 3",
-    description: "Brief description of your third project. Mention unique challenges and how you overcame them.",
+    title: "Quote Generator",
+    description: "An interactive application that fetches quotes through an API and allows users to directly share them on the X platform. A simple yet functional tool for inspiration.",
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-    tags: ["JavaScript", "React", "REST API", "Redux"],
-    liveLink: "https://your-project3.com",
-    githubLink: "https://github.com/yourusername/project3",
+    tags: ["JavaScript", "HTML", "CSS", "API Integration"],
+    liveLink: "https://quotegenerator01.netlify.app/",
+    githubLink: "https://github.com/pksingh0020",
   },
 ];
 

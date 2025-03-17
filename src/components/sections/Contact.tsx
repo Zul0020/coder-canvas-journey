@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
@@ -120,41 +120,9 @@ export function Contact() {
               "opacity-0",
               inView && "animate-fade-in delay-100"
             )}>
-              <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-xl font-bold mb-6">Connect With Me</h3>
               
               <div className="space-y-6">
-                <div className="bg-muted/30 p-6 rounded-lg">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-portfolio-primary/20 p-2 rounded-full">
-                      <Mail className="h-5 w-5 text-portfolio-primary" />
-                    </div>
-                    <h4 className="font-medium">Email</h4>
-                  </div>
-                  <a 
-                    href="mailto:your.email@example.com" 
-                    className="text-muted-foreground hover:text-portfolio-primary transition-colors"
-                  >
-                    your.email@example.com
-                  </a>
-                </div>
-                
-                <div className="bg-muted/30 p-6 rounded-lg">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-portfolio-primary/20 p-2 rounded-full">
-                      <Linkedin className="h-5 w-5 text-portfolio-primary" />
-                    </div>
-                    <h4 className="font-medium">LinkedIn</h4>
-                  </div>
-                  <a 
-                    href="https://linkedin.com/in/yourusername" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-portfolio-primary transition-colors"
-                  >
-                    linkedin.com/in/yourusername
-                  </a>
-                </div>
-                
                 <div className="bg-muted/30 p-6 rounded-lg">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="bg-portfolio-primary/20 p-2 rounded-full">
@@ -163,13 +131,30 @@ export function Contact() {
                     <h4 className="font-medium">GitHub</h4>
                   </div>
                   <a 
-                    href="https://github.com/yourusername" 
+                    href="https://github.com/pksingh0020" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-portfolio-primary transition-colors"
                   >
-                    github.com/yourusername
+                    github.com/pksingh0020
                   </a>
+                </div>
+                
+                <div className="bg-muted/30 p-6 rounded-lg">
+                  <h4 className="font-medium mb-3">About Me</h4>
+                  <p className="text-muted-foreground">
+                    Full stack developer passionate about building web applications
+                    with modern technologies. Currently seeking new opportunities
+                    to contribute to innovative projects.
+                  </p>
+                </div>
+                
+                <div className="bg-muted/30 p-6 rounded-lg">
+                  <h4 className="font-medium mb-3">Portfolio</h4>
+                  <p className="text-muted-foreground">
+                    Check out my projects to see examples of my work
+                    and the technologies I've used in real-world applications.
+                  </p>
                 </div>
               </div>
             </div>

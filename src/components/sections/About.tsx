@@ -25,33 +25,30 @@ export function About() {
             
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Hello! I'm a passionate software developer with a strong focus on creating 
-                elegant and efficient solutions to complex problems. My journey in programming 
-                began with a curiosity about how digital products work, and has evolved into 
-                a professional career building impactful applications.
+                Hello! I'm Prince, a passionate full stack developer currently seeking new opportunities.
+                My journey in software development has equipped me with a strong foundation in creating 
+                efficient and user-friendly applications.
               </p>
               
               <p>
-                With a solid background in both frontend and backend development, I enjoy 
-                working with modern technologies to deliver responsive, user-friendly 
-                applications. I specialize in JavaScript/TypeScript, React, Node.js, and 
-                modern web technologies.
+                I specialize in modern web technologies including TypeScript, React, and various cloud 
+                platforms. My experience spans from developing interactive front-end interfaces to 
+                implementing robust back-end solutions with a focus on performance and scalability.
               </p>
               
               <p>
-                I'm committed to continuous learning and staying updated with the latest 
-                industry trends. When I'm not coding, you can find me contributing to 
-                open-source projects, sharing knowledge with the developer community, 
-                or exploring new technologies.
+                I'm dedicated to continuous learning and staying updated with emerging technologies. 
+                When I'm not coding, I enjoy contributing to open-source projects and exploring innovative 
+                approaches to solve complex problems in the digital space.
               </p>
             </div>
             
             <div className="mt-8 flex flex-wrap gap-3">
               <span className="px-3 py-1 bg-muted rounded-full text-sm">Problem Solver</span>
               <span className="px-3 py-1 bg-muted rounded-full text-sm">Full Stack Developer</span>
-              <span className="px-3 py-1 bg-muted rounded-full text-sm">Detail-Oriented</span>
-              <span className="px-3 py-1 bg-muted rounded-full text-sm">Fast Learner</span>
-              <span className="px-3 py-1 bg-muted rounded-full text-sm">Creative Thinker</span>
+              <span className="px-3 py-1 bg-muted rounded-full text-sm">React</span>
+              <span className="px-3 py-1 bg-muted rounded-full text-sm">TypeScript</span>
+              <span className="px-3 py-1 bg-muted rounded-full text-sm">Cloud Services</span>
             </div>
           </div>
           
