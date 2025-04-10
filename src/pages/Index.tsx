@@ -39,8 +39,10 @@ const Index = () => {
         const windowHeight = window.innerHeight;
         
         if (sectionTop < windowHeight * 0.75 && sectionTop > -windowHeight * 0.5) {
+          // Instead of directly adding the class, use classList
           section.classList.add('opacity-100');
-          section.classList.remove('opacity-0');
+        } else {
+          section.classList.remove('opacity-100');
         }
       });
     };
