@@ -1,9 +1,10 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useTheme } from "@/hooks/use-theme";
 
 type NavLink = {
   label: string;
@@ -22,6 +23,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +33,12 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const resumeLink = "https://drive.google.com/file/d/10MGaLuztczj9l4lWbEpvQ0JsJ8-Ouqnj/view?usp=sharing";
 
   return (
     <header
@@ -46,8 +54,22 @@ export function Header() {
           <h1 className="text-xl font-bold text-gradient">Prince Kumar Singh</h1>
         </a>
 
-        {isMobile ? (
-          <>
+        <div className="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            className="mr-1"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
+          </Button>
+
+          {isMobile ? (
             <Button
               variant="ghost"
               size="icon"
@@ -60,46 +82,57 @@ export function Header() {
                 <Menu className="h-5 w-5" />
               )}
             </Button>
-
-            {isMenuOpen && (
-              <div className="fixed inset-0 top-16 bg-background/95 backdrop-blur-sm p-4 z-50">
-                <nav className="flex flex-col space-y-4">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      className="text-lg font-medium py-2 border-b border-muted hover:text-portfolio-primary transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </nav>
-              </div>
-            )}
-          </>
-        ) : (
-          <nav className="flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium hover:text-portfolio-primary transition-colors"
+          ) : (
+            <nav className="flex items-center space-x-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium hover:text-portfolio-primary transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a 
+                href={resumeLink}
+                target="_blank" 
+                rel="noopener noreferrer"
               >
-                {link.label}
+                <Button className="bg-portfolio-primary hover:bg-portfolio-primary/90">
+                  Resume
+                </Button>
               </a>
-            ))}
-            <a 
-              href="https://drive.google.com/file/d/10MGaLuztczj9l4lWbEpvQ0JsJ8-Ouqnj/view?usp=sharing" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button className="bg-portfolio-primary hover:bg-portfolio-primary/90">
-                Resume
-              </Button>
-            </a>
-          </nav>
-        )}
+            </nav>
+          )}
+
+          {isMobile && isMenuOpen && (
+            <div className="fixed inset-0 top-16 bg-background/95 backdrop-blur-sm p-4 z-50">
+              <nav className="flex flex-col space-y-4">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-lg font-medium py-2 border-b border-muted hover:text-portfolio-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <a 
+                  href={resumeLink}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="pt-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Button className="w-full bg-portfolio-primary hover:bg-portfolio-primary/90">
+                    Resume
+                  </Button>
+                </a>
+              </nav>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
