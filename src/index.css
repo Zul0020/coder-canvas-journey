@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -129,12 +130,21 @@
   }
 }
 
+/* Enhanced canvas styles */
 canvas {
   @apply touch-none;
+  image-rendering: optimizeQuality;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .canvas-container {
   @apply fixed top-0 left-0 w-full h-full -z-10;
+  background-image: radial-gradient(
+    circle at center,
+    var(--tw-gradient-stops)
+  );
+  @apply from-transparent via-transparent to-background/70;
 }
 
 .experience-container {
@@ -146,10 +156,31 @@ canvas {
   pointer-events: auto;
 }
 
+/* Enhanced section styles with animations */
 .section {
-  @apply min-h-screen flex flex-col justify-center py-16 relative z-10;
+  @apply min-h-screen flex flex-col justify-center py-16 relative z-10 opacity-0 transition-opacity duration-700;
+}
+
+.section.opacity-100 {
+  @apply opacity-100;
 }
 
 .section-content {
   @apply max-w-5xl mx-auto w-full px-4 md:px-8;
+}
+
+/* 3D hover effect for cards */
+.card-3d-effect {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.card-3d-effect:hover {
+  transform: translateY(-5px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Cool background blur effect */
+.glassmorphism {
+  @apply backdrop-blur-sm bg-background/30 border border-white/10;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
