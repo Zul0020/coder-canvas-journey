@@ -5,6 +5,7 @@ import { Menu, X, Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useTheme } from "@/hooks/use-theme";
+import { Switch } from "@/components/ui/switch";
 
 type NavLink = {
   label: string;
@@ -23,8 +24,8 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-  const { theme, setTheme } = useTheme();
-
+  const { theme, toggleTheme } = useTheme();
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -34,10 +35,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
+  const isDark = theme === "dark";
   const resumeLink = "https://drive.google.com/file/d/10MGaLuztczj9l4lWbEpvQ0JsJ8-Ouqnj/view?usp=sharing";
 
   return (
@@ -55,19 +53,16 @@ export function Header() {
         </a>
 
         <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="mr-1"
-            aria-label="Toggle theme"
-          >
-            {theme === 'dark' ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
-          </Button>
+          {/* Theme Toggle Button - Always visible */}
+          <div className="flex items-center gap-2 mr-2 bg-muted/50 rounded-full p-1 px-3">
+            <Sun className="h-4 w-4 text-yellow-500" />
+            <Switch 
+              checked={isDark}
+              onCheckedChange={toggleTheme}
+              aria-label="Toggle theme"
+            />
+            <Moon className="h-4 w-4 text-blue-400" />
+          </div>
 
           {isMobile ? (
             <Button
